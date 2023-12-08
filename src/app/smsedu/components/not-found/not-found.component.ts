@@ -1,0 +1,8 @@
+import { Component } from '@angular/core';
+
+@Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'smsedu-not-found',
+  templateUrl: './not-found.component.html',
+})
+export class NotFoundComponent {}

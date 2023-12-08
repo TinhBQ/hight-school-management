@@ -1,0 +1,303 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<div class="assignment-body grid">
+  <div class="col-12">
+    <div class="card px-6 py-6 bg-">
+      <!-- Tooolbar -->
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <button
+              pButton
+              pRipple
+              label="Thêm"
+              icon="pi pi-plus"
+              class="p-button-success mr-2"
+              (click)="openNew()"></button>
+            <button
+              pButton
+              pRipple
+              icon="pi pi-trash"
+              class="p-button-danger"
+              (click)="onDeleteSelectedDepartments()"></button>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <!-- <p-fileUpload
+            mode="basic"
+            accept="image/*"
+            [maxFileSize]="1000000"
+            label="Import"
+            chooseLabel="Import"
+            class="mr-2 inline-block"></p-fileUpload> -->
+          <button
+            pButton
+            pRipple
+            label="Export"
+            icon="pi pi-upload"
+            class="p-button-help"
+            (click)="onExportExcel()"></button>
+        </ng-template>
+      </p-toolbar>
+
+      <!-- Table data -->
+      <p-table
+        #dt
+        [value]="departments"
+        [(selection)]="selectedDepartments"
+        [lazy]="true"
+        (onLazyLoad)="onLoadDepartments($event)"
+        styleClass="p-datatable-gridlines"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        responsiveLayout="scroll"
+        [paginator]="true"
+        [rows]="10"
+        [totalRecords]="totalRecords"
+        [loading]="loading"
+        dataKey="id"
+        [showCurrentPageReport]="true"
+        currentPageReportTemplate="Hiển thị từ {first} đến {last} của mục {totalRecords}"
+        [rowsPerPageOptions]="[10, 20, 30]"
+        [resizableColumns]="true">
+        <ng-template pTemplate="caption">
+          <div class="flex">
+            <button
+              pButton
+              label="Clear"
+              class="p-button-outlined"
+              icon="pi pi-filter-slash"
+              (click)="clear()"></button>
+            <span class="p-input-icon-left ml-auto">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                [value]="searchDepartment"
+                placeholder="Tìm kiếm..."
+                (keyup)="onSearch(getSearchValue($event))"
+                class="w-full sm:w-auto" />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr class="text-center">
+            <th style="width: 3rem" class="text-center">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th pSortableColumn="name" class="text-center">
+              Tên Phòng ban<p-sortIcon field="name"></p-sortIcon>
+            </th>
+            <th pSortableColumn="leader" class="text-center">
+              Trưởng Phòng ban<p-sortIcon field="leader"></p-sortIcon>
+            </th>
+            <th pSortableColumn="quantity" class="text-center">
+              Số lượng<p-sortIcon field="quantity"></p-sortIcon>
+            </th>
+            <th pSortableColumn="status" class="text-center">
+              Trạng thái<p-sortIcon field="status"></p-sortIcon>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-department>
+          <tr [pEditableRow]="department">
+            <td class="text-center">
+              <p-tableCheckbox [value]="department"></p-tableCheckbox>
+            </td>
+            <td style="width: 20%; min-width: 11rem">
+              <span class="p-column-title">Họ và tên</span>
+              {{ department.name }}
+            </td>
+            <td style="width: 20%; min-width: 11rem">
+              <span class="p-column-title">Họ và tên</span>
+              {{ department.leader?.name || 'Chưa có Trưởng phòng' }}
+            </td>
+            <td style="width: 20%; min-width: 11rem" class="text-center">
+              <span class="p-column-title">Họ và tên</span>
+              {{ department.quantity || 0 }}
+            </td>
+            <td style="width: 20%; min-width: 11rem">
+              <span class="p-column-title">Trạng thái</span>
+              <span
+                [class]="
+                  'assignment-badge status-' +
+                  (department.status
+                    ? department.status.toLowerCase()
+                    : 'inactivate')
+                "
+                >{{ department?.status || 'Không kích hoạt' }}</span
+              >
+            </td>
+            <td class="text-justify">
+              <div class="flex align-items-center justify-content-center gap-2">
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-success"
+                  (click)="openEdit(department.id)"></button>
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-warning"
+                  (click)="onDelete(department)"></button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <!--Department Dialog -->
+      <p-dialog
+        [(visible)]="departmentDialog"
+        header="PHÒNG BAN"
+        [modal]="true"
+        class="p-fluid"
+        [style]="{ width: '25vw' }">
+        <ng-template pTemplate="content">
+          <form [formGroup]="departmentForm" autocomplete="off">
+            <!-- Teacher Form: name -->
+            <div class="flex flex-column flex-auto mb-4">
+              <label for="name" class="font-bold block mb-2"
+                >Tên Phòng ban</label
+              >
+              <input
+                type="text"
+                pInputText
+                id="name"
+                formControlName="name"
+                placeholder="..."
+                class="w-full" />
+              <small
+                *ngIf="
+                  departmentForm.controls['name'].invalid &&
+                  (departmentForm.controls['name'].dirty ||
+                    departmentForm.controls['name'].touched)
+                "
+                class="block p-error mt-2">
+                <div
+                  *ngIf="departmentForm.controls['name'].errors?.['required']">
+                  Tên Phòng ban là bắt buộc.
+                </div>
+                <div
+                  *ngIf="departmentForm.controls['name'].errors?.['pattern']">
+                  Tên Phòng ban không hợp lệ.
+                </div>
+              </small>
+            </div>
+
+            <!-- Teacher Form: leader -->
+            <div class="flex flex-column flex-auto mb-4">
+              <label for="leader" class="font-bold block mb-2"
+                >Trưởng Phòng ban</label
+              >
+              <p-autoComplete
+                inputId="leader"
+                formControlName="leader"
+                [dropdown]="true"
+                [suggestions]="filteredTeachers"
+                (completeMethod)="onFliterTeacher($event)"
+                field="name"></p-autoComplete>
+            </div>
+
+            <!-- Teacher Form: leader -->
+            <div class="flex flex-column flex-auto mb-4">
+              <label for="quantity" class="font-bold block mb-2"
+                >Trưởng Phòng ban</label
+              >
+              <p-inputNumber
+                [showButtons]="true"
+                inputId="quantity"
+                formControlName="quantity"
+                [min]="0"
+                [max]="10">
+              </p-inputNumber>
+            </div>
+          </form>
+        </ng-template>
+
+        <!-- Action -->
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            label="Hủy"
+            icon="pi pi-times"
+            class="p-button-text"></button>
+          <button
+            pButton
+            pRipple
+            label="Lưu"
+            icon="pi pi-check"
+            class="p-button-text"
+            [disabled]="departmentForm.invalid"
+            (click)="onSaveDepartment()"></button>
+        </ng-template>
+      </p-dialog>
+
+      <p-dialog
+        [(visible)]="deleteSelectedDepartmentsDialog"
+        header="Xác nhận"
+        [modal]="true"
+        [style]="{ width: '450px' }">
+        <div class="flex align-items-center justify-content-center">
+          <i
+            class="pi pi-exclamation-triangle mr-3"
+            style="font-size: 2rem"></i>
+
+          <span>Bản chắc chắn muốn xóa danh sách Phòng ban?</span>
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-times"
+            class="p-button-text"
+            label="Không"
+            (click)="deleteSelectedDepartmentsDialog = false"></button>
+          <button
+            pButton
+            pRipple
+            icon="pi pi-check"
+            class="p-button-text"
+            label="Có"
+            (click)="onConfirmSelectedDelete()"></button>
+        </ng-template>
+      </p-dialog>
+
+      <p-dialog
+        [(visible)]="deleteDeparmentDialog"
+        header="Xác nhận"
+        [modal]="true"
+        [style]="{ width: '450px' }">
+        <div class="flex align-items-center justify-content-center">
+          <i
+            class="pi pi-exclamation-triangle mr-3"
+            style="font-size: 2rem"></i>
+
+          <span *ngIf="department"
+            >Bản chắc chắn muốn xóa lớp <b>{{ department.name }}</b
+            >?</span
+          >
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-times"
+            class="p-button-text"
+            label="Không"
+            (click)="deleteDeparmentDialog = false"></button>
+          <button
+            pButton
+            pRipple
+            icon="pi pi-check"
+            class="p-button-text"
+            label="Có"
+            (click)="onConfirmDelete()"></button>
+        </ng-template>
+      </p-dialog>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.assignment-badge {
+  border-radius: var(--border-radius);
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+
+  &.status-activate {
+    background: var(--green-200);
+    color: var(--green-700);
+  }
+
+  &.status-deleted {
+    background: var(--red-200);
+    color: var(--red-700);
+  }
+
+  &.status-inactivate {
+    background: var(--yellow-200);
+    color: var(--yellow-700);
+  }
+}

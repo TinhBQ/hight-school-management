@@ -1,0 +1,2408 @@
+[
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "3": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "4": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tuấn(S)"
+        },
+        "5": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Sơn(H)"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "9": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "10": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Sơn(H)"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "13": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "14": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tuấn(S)"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Sơn(H)"
+        },
+        "16": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "17": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Công"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "22": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "23": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "27": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "28": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Công"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Công"
+        },
+        "className": "10A1"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "4": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "5": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trang(H)"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "9": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Huyền"
+        },
+        "10": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trang(H)"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "14": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Huyền"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trang(H)"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "17": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "22": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "23": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "27": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "28": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Trang(H)"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Trang(H)"
+        },
+        "className": "10A2"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "4": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "5": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "9": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tr-Linh"
+        },
+        "10": {
+            "subjectShortName": "TK&CN",
+            "teacherShortName": "Công"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "14": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tr-Linh"
+        },
+        "15": {
+            "subjectShortName": "TK&CN",
+            "teacherShortName": "Công"
+        },
+        "16": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "17": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Công"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "22": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "23": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Công"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "27": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "28": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Công"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Hằng"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Hằng"
+        },
+        "className": "10A3"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "4": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "5": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "9": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "10": {
+            "subjectShortName": "TK&CN",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "14": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "15": {
+            "subjectShortName": "TK&CN",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "17": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "22": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "23": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thẩm"
+        },
+        "27": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "28": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Thẩm"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Thẩm"
+        },
+        "className": "10A4"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "3": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "4": {
+            "subjectShortName": "CN(TT)",
+            "teacherShortName": "Xuân(S)"
+        },
+        "5": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "9": {
+            "subjectShortName": "CN(TT)",
+            "teacherShortName": "Xuân(S)"
+        },
+        "10": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "11": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "12": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "14": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "15": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "16": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Xuân(S)"
+        },
+        "17": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "21": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "22": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Xuân(S)"
+        },
+        "23": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "27": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "28": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Hoa(V)"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Hoa(V)"
+        },
+        "className": "10A5"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "3": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "4": {
+            "subjectShortName": "CN(TT)",
+            "teacherShortName": "Trang(S)"
+        },
+        "5": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "9": {
+            "subjectShortName": "CN(TT)",
+            "teacherShortName": "Trang(S)"
+        },
+        "10": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "11": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "12": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "14": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Thọ"
+        },
+        "15": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "16": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Thọ"
+        },
+        "17": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "21": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "22": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Trang(S)"
+        },
+        "23": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "27": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Trang(S)"
+        },
+        "28": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Nhàn"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Nhàn"
+        },
+        "className": "10A6"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "3": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "4": {
+            "subjectShortName": "NHAC",
+            "teacherShortName": "Thảo"
+        },
+        "5": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "9": {
+            "subjectShortName": "NHAC",
+            "teacherShortName": "Thảo"
+        },
+        "10": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "11": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "12": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "13": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "14": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "15": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Thọ"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Tuấn(L)"
+        },
+        "17": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "21": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Thọ"
+        },
+        "22": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "23": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "27": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Trang(S)"
+        },
+        "28": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Tân"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Tân"
+        },
+        "className": "10A7"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "4": {
+            "subjectShortName": "MT",
+            "teacherShortName": "Hoa(M)"
+        },
+        "5": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "9": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "10": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Kỷ"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "14": {
+            "subjectShortName": "MT",
+            "teacherShortName": "Hoa(M)"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Kỷ"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "17": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "22": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "23": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "27": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "28": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Ngân"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Hoa(M)"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Hoa(M)"
+        },
+        "className": "10A8"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "4": {
+            "subjectShortName": "NHAC",
+            "teacherShortName": "Thảo"
+        },
+        "5": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tr-Linh"
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "9": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "10": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Tr-Linh"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "14": {
+            "subjectShortName": "NHAC",
+            "teacherShortName": "Thảo"
+        },
+        "15": {
+            "subjectShortName": "KT&PL",
+            "teacherShortName": "Tr-Linh"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "17": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "21": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "22": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "23": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "24": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "27": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tr-Linh"
+        },
+        "28": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "29": {
+            "subjectShortName": "TN&HN",
+            "teacherShortName": "Tr-Linh"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Tr-Linh"
+        },
+        "className": "10A9"
+    },
+    {
+        "1": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "3": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Ngân"
+        },
+        "4": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "5": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "9": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "10": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "13": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "14": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Loan"
+        },
+        "16": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "17": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Uyên"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "22": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "23": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Phước"
+        },
+        "24": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "25": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Uyên"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "27": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "28": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Loan"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Loan"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Loan"
+        },
+        "className": "11C1"
+    },
+    {
+        "1": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "3": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Ngân"
+        },
+        "4": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "5": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "9": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "10": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "13": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "14": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Ánh"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trinh"
+        },
+        "16": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Ánh"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trinh"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "22": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "23": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Phước"
+        },
+        "24": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "25": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "27": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "28": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Nhã"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Nhã"
+        },
+        "className": "11C2"
+    },
+    {
+        "1": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "3": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Ngân"
+        },
+        "4": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "5": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "9": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "10": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Nhân"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "14": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "15": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Nhân"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "22": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "23": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Ánh"
+        },
+        "24": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "25": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Trường"
+        },
+        "27": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Phương(T)"
+        },
+        "28": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Ánh"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Ánh"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Ánh"
+        },
+        "className": "11C3"
+    },
+    {
+        "1": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "3": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "4": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "5": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "6": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "7": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "8": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "9": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "10": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "11": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "12": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "13": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "14": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Nhã"
+        },
+        "15": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thoa"
+        },
+        "22": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Tg.Linh"
+        },
+        "23": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "24": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "25": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Đệ"
+        },
+        "27": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "28": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trang(H)"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Phương(L)"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Xuân(S)"
+        },
+        "className": "11C5"
+    },
+    {
+        "1": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "3": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "4": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "5": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "9": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "10": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Oanh"
+        },
+        "13": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "14": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Tg.Linh"
+        },
+        "15": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Ngọc"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "22": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "23": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Ngọc"
+        },
+        "24": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "25": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "27": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "28": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trinh"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Trâm"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Trâm"
+        },
+        "className": "11C6"
+    },
+    {
+        "1": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "3": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "4": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "5": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "9": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "10": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Nhân"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "13": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Toàn"
+        },
+        "14": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trinh"
+        },
+        "16": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "22": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Tg.Linh"
+        },
+        "23": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trinh"
+        },
+        "24": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "25": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Xuân(T)"
+        },
+        "26": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Trâm"
+        },
+        "27": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tg.Linh"
+        },
+        "28": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Nhân"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Toàn"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Toàn"
+        },
+        "className": "11C7"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "4": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "5": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Phụng"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "9": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Thọ"
+        },
+        "10": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "13": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Phương(L)"
+        },
+        "14": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "15": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Sơn(S)"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "17": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Sơn(S)"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "22": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuyến"
+        },
+        "23": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "24": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "25": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tuấn(S)"
+        },
+        "26": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "27": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "28": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tuấn(S)"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Phụng"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Phụng"
+        },
+        "className": "12B1"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "4": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "5": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "8": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "9": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Ngọc"
+        },
+        "10": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Thủy"
+        },
+        "13": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Thùy"
+        },
+        "14": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "15": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Phương(L)"
+        },
+        "17": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Sơn(S)"
+        },
+        "21": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "22": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "23": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "24": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Thọ"
+        },
+        "25": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Linh(Đ)"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tân"
+        },
+        "27": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "28": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Loan"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Thùy"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Thùy"
+        },
+        "className": "12B2"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "4": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "5": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "9": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Tức"
+        },
+        "10": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "13": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Lợi"
+        },
+        "14": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Lợi"
+        },
+        "15": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Lợi"
+        },
+        "17": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "22": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Cẩm"
+        },
+        "23": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "24": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "25": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Trang(S)"
+        },
+        "26": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hằng"
+        },
+        "27": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "28": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Trang(S)"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Cẩm"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Cẩm"
+        },
+        "className": "12B3"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "4": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Thọ"
+        },
+        "5": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tuấn(S)"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "8": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "9": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "10": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "13": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Ngọc"
+        },
+        "14": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "15": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "22": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Hòa"
+        },
+        "23": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "24": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "25": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "26": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "27": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "28": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tuấn(S)"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Diễm"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Diễm"
+        },
+        "className": "12B4"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "4": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Ngọc"
+        },
+        "5": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "8": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "9": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "10": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tiến"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Nhàn"
+        },
+        "13": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Nam"
+        },
+        "14": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Ngân"
+        },
+        "15": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tiến"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "22": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "23": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Tiến"
+        },
+        "24": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "25": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "27": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "28": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Loan"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Tuấn(T)"
+        },
+        "className": "12B5"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "4": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Lợi"
+        },
+        "5": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "8": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "9": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Ngân"
+        },
+        "10": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Kỷ"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Diễm"
+        },
+        "13": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Tám"
+        },
+        "14": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Kỷ"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "22": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Bình"
+        },
+        "23": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Kỷ"
+        },
+        "24": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "25": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "Tư"
+        },
+        "27": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "28": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Huyền"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "Kỷ"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "Kỷ"
+        },
+        "className": "12B6"
+    },
+    {
+        "1": {
+            "subjectShortName": "CC",
+            "teacherShortName": null
+        },
+        "2": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "3": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "4": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tr-Linh"
+        },
+        "5": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "6": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "7": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "8": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "9": {
+            "subjectShortName": "GDCD",
+            "teacherShortName": "Ngân"
+        },
+        "10": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Sơn(H)"
+        },
+        "11": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "12": {
+            "subjectShortName": "NN",
+            "teacherShortName": "Hoa(A)"
+        },
+        "13": {
+            "subjectShortName": "VAN",
+            "teacherShortName": "Duy(V)"
+        },
+        "14": {
+            "subjectShortName": "CN",
+            "teacherShortName": "Lợi"
+        },
+        "15": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Sơn(H)"
+        },
+        "16": {
+            "subjectShortName": "LY",
+            "teacherShortName": "Ngọc"
+        },
+        "17": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "21": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "22": {
+            "subjectShortName": "DIA",
+            "teacherShortName": "Hương"
+        },
+        "23": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Sơn(H)"
+        },
+        "24": {
+            "subjectShortName": "SU",
+            "teacherShortName": "Tức"
+        },
+        "25": {
+            "subjectShortName": "HOA",
+            "teacherShortName": "Trân"
+        },
+        "26": {
+            "subjectShortName": "TOAN",
+            "teacherShortName": "My"
+        },
+        "27": {
+            "subjectShortName": "TIN",
+            "teacherShortName": "Nhi"
+        },
+        "28": {
+            "subjectShortName": "SINH",
+            "teacherShortName": "Trang(S)"
+        },
+        "29": {
+            "subjectShortName": "NGLL",
+            "teacherShortName": "My"
+        },
+        "30": {
+            "subjectShortName": "SH",
+            "teacherShortName": "My"
+        },
+        "className": "12B7"
+    }
+]

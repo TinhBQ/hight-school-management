@@ -1,0 +1,336 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<div class="assignment-body grid">
+  <div class="col-12">
+    <div class="card px-6 py-6">
+      <!-- Tooolbar -->
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <button
+              pButton
+              pRipple
+              label="Thêm"
+              icon="pi pi-plus"
+              class="p-button-success mr-2"
+              (click)="openNew()"></button>
+            <button
+              pButton
+              pRipple
+              label="Xóa"
+              icon="pi pi-trash"
+              class="p-button-danger"
+              (click)="onDeleteSelectedClasses()"></button>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <!-- <p-fileUpload
+            mode="basic"
+            accept="image/*"
+            [maxFileSize]="1000000"
+            label="Import"
+            chooseLabel="Import"
+            class="mr-2 inline-block"></p-fileUpload> -->
+          <button
+            pButton
+            pRipple
+            label="Export"
+            icon="pi pi-upload"
+            class="p-button-help"
+            (click)="onExportExcel()"></button>
+        </ng-template>
+      </p-toolbar>
+
+      <!-- Table data -->
+      <p-table
+        #dt
+        [value]="classes"
+        [lazy]="true"
+        [(selection)]="selectedClasses"
+        (onLazyLoad)="onLoadClasses($event)"
+        styleClass="p-datatable-gridlines"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [columns]="cols"
+        responsiveLayout="scroll"
+        [paginator]="true"
+        [rows]="10"
+        [totalRecords]="totalRecords"
+        [loading]="loading"
+        [showCurrentPageReport]="true"
+        currentPageReportTemplate="Hiển thị từ {first} đến {last} của mục {totalRecords}"
+        [rowsPerPageOptions]="[10, 20, 30]"
+        [resizableColumns]="true">
+        <ng-template pTemplate="caption">
+          <div class="flex">
+            <button
+              pButton
+              label="Clear"
+              class="p-button-outlined"
+              icon="pi pi-filter-slash"
+              (click)="clear()"></button>
+            <span class="p-input-icon-left ml-auto">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                [value]="searchClass"
+                placeholder="Tìm kiếm..."
+                (keyup)="onSearch(getSearchValue($event))"
+                class="w-full sm:w-auto" />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr class="text-center">
+            <th style="width: 3rem" class="text-center">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th pSortableColumn="name" class="text-center">
+              Lớp<p-sortIcon field="name"></p-sortIcon>
+            </th>
+            <th pSortableColumn="formTeacher" class="text-center">
+              Chủ nhiệm<p-sortIcon field="formTeacher"></p-sortIcon>
+            </th>
+            <th pSortableColumn="quantity" class="text-center">
+              Số lượng<p-sortIcon field="quantity"></p-sortIcon>
+            </th>
+            <th pSortableColumn="schoolShift" class="text-center">
+              Buổi<p-sortIcon field="schoolShift"></p-sortIcon>
+            </th>
+            <th pSortableColumn="status" class="text-center">
+              Trạng thái<p-sortIcon field="status"></p-sortIcon>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-class>
+          <tr>
+            <td class="text-center">
+              <p-tableCheckbox [value]="class"></p-tableCheckbox>
+            </td>
+            <td style="width: 20%; min-width: 11rem" class="text-center">
+              <span class="p-column-title">Lớp</span>
+              {{ class.name }}
+            </td>
+            <td style="width: 20%; min-width: 10rem">
+              <span class="p-column-title">Chủ nhiệm</span>
+              {{ class.formTeacher }}
+            </td>
+            <td style="width: 20%; min-width: 10rem" class="text-center">
+              <span class="p-column-title">Sỉ số</span>
+              {{ class.quantity }}
+            </td>
+            <td style="width: 20%; min-width: 10rem">
+              <span class="p-column-title">Buổi</span>
+              {{ class.schoolShift === 'morning' ? 'Sáng' : 'Chiều' }}
+            </td>
+            <td style="width: 20%; min-width: 10rem">
+              <span class="p-column-title">Trạng thái</span>
+              <span
+                [class]="
+                  'assignment-badge status-' +
+                  (class.status ? class.status.toLowerCase() : 'inactivate')
+                "
+                >{{ class?.status || 'Không kích hoạt' }}</span
+              >
+            </td>
+            <td class="text-justify">
+              <div class="flex">
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-success mr-2"
+                  (click)="openEdit(class.id)"></button>
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-warning"
+                  (click)="onDelete(class)"></button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <!-- class Dialog -->
+      <p-dialog
+        [(visible)]="classDialog"
+        header="LỚP HỌC"
+        [modal]="true"
+        class="p-fluid">
+        <ng-template pTemplate="content">
+          <form [formGroup]="classForm" autocomplete="off">
+            <div class="flex flex-wrap gap-3 mb-4">
+              <div class="flex-auto">
+                <label for="grade" class="font-bold block mb-2">Khối</label>
+                <p-dropdown
+                  id="grade"
+                  formControlName="grade"
+                  [options]="grades"
+                  optionLabel="name"
+                  placeholder="Chọn khối"
+                  class="w-full"></p-dropdown>
+              </div>
+
+              <div class="flex-auto">
+                <label for="schoolShift" class="font-bold block mb-2"
+                  >Buổi</label
+                >
+                <p-dropdown
+                  id="schoolShift"
+                  formControlName="schoolShift"
+                  [options]="schoolShifts"
+                  optionLabel="name"
+                  placeholder="Chọn buổi"
+                  class="w-full"></p-dropdown>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-4">
+              <div class="flex-auto">
+                <label for="schoolYear" class="font-bold block mb-2"
+                  >Năm học</label
+                >
+                <p-calendar
+                  id="schoolYear"
+                  dateFormat="yy"
+                  id="dateOfBirth"
+                  formControlName="schoolYear"
+                  [readonlyInput]="true"
+                  [showButtonBar]="true"
+                  appendTo="body"
+                  view="year"
+                  [showIcon]="true"
+                  placeholder="../../...." />
+              </div>
+              <!-- Teacher Form: name -->
+
+              <div class="flex-auto">
+                <label for="teacher" class="font-bold block mb-2"
+                  >Chủ nhiệm</label
+                >
+                <p-autoComplete
+                  inputId="teacher"
+                  formControlName="teacher"
+                  [dropdown]="true"
+                  [suggestions]="filteredTeachers"
+                  (completeMethod)="onFliterTeacher($event)"
+                  field="name"></p-autoComplete>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <!-- Teacher Form: name -->
+              <div class="flex-auto">
+                <label for="name" class="font-bold block mb-2">Lớp</label>
+                <input
+                  type="text"
+                  pInputText
+                  id="name"
+                  formControlName="name"
+                  placeholder="..."
+                  class="w-full" />
+              </div>
+
+              <!-- Teacher Form: nickName -->
+              <div class="flex-auto">
+                <label for="quantity" class="font-bold block mb-2"
+                  >Số lượng</label
+                >
+                <p-inputNumber
+                  inputId="quantity"
+                  formControlName="quantity"
+                  [min]="0"
+                  [max]="50">
+                </p-inputNumber>
+              </div>
+            </div>
+          </form>
+        </ng-template>
+
+        <!-- Action -->
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            label="Hủy"
+            icon="pi pi-times"
+            class="p-button-text"
+            (click)="onHideDialog()"></button>
+          <button
+            pButton
+            pRipple
+            label="Lưu"
+            icon="pi pi-check"
+            class="p-button-text"
+            [disabled]="classForm.invalid"
+            (click)="onSaveClass()"></button>
+        </ng-template>
+      </p-dialog>
+
+      <p-dialog
+        [(visible)]="deleteSelectedClassesDialog"
+        header="Xác nhận"
+        [modal]="true"
+        [style]="{ width: '450px' }">
+        <div class="flex align-items-center justify-content-center">
+          <i
+            class="pi pi-exclamation-triangle mr-3"
+            style="font-size: 2rem"></i>
+
+          <span>Bản chắc chắn muốn xóa danh sách lớp?</span>
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-times"
+            class="p-button-text"
+            label="Không"
+            (click)="deleteSelectedClassesDialog = false"></button>
+          <button
+            pButton
+            pRipple
+            icon="pi pi-check"
+            class="p-button-text"
+            label="Có"
+            (click)="onConfirmSelectedDelete()"></button>
+        </ng-template>
+      </p-dialog>
+
+      <p-dialog
+        [(visible)]="deleteClassDialog"
+        header="Xác nhận"
+        [modal]="true"
+        [style]="{ width: '450px' }">
+        <div class="flex align-items-center justify-content-center">
+          <i
+            class="pi pi-exclamation-triangle mr-3"
+            style="font-size: 2rem"></i>
+
+          <span *ngIf="_class"
+            >Bản chắc chắn muốn xóa lớp <b>{{ _class.name }}</b
+            >?</span
+          >
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-times"
+            class="p-button-text"
+            label="Không"
+            (click)="deleteClassDialog = false"></button>
+          <button
+            pButton
+            pRipple
+            icon="pi pi-check"
+            class="p-button-text"
+            label="Có"
+            (click)="onConfirmDelete()"></button>
+        </ng-template>
+      </p-dialog>
+    </div>
+  </div>
+</div>

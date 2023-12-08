@@ -1,0 +1,204 @@
+.layout-topbar {
+  @include flex();
+  @include flex-align-center();
+  padding: 16px 32px;
+  height: 75px;
+  position: absolute;
+  border-bottom: 2px solid var(--surface-border);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  // background-color: var(--surface-border);
+  background-color: var(--highlight-bg);
+
+
+  .layout-topbar-wrapper {
+    @include flex();
+    @include flex-align-center();
+    @include flex-justify-between();
+    width: 100%;
+
+    .layout-topbar-right {
+      .profile-wrapper {
+        @include flex();
+        @include flex-align-center();
+        gap: 8px;
+
+        .profile-image-wrapper {
+          width: 45px;
+          height: 45px;
+
+          img {
+            @include image(100%, 100%);
+            border-radius: 50%;
+          }
+        }
+
+        .profile-info-wrapper {
+            @include flex();
+            @include flex-direction-column();
+            @include flex-justify-center();
+            gap: 4px;
+
+            h3 {
+                margin: 0;
+            }
+        }
+      }
+    }
+
+    .layout-topbar-right {
+        .profile-item {
+            position: relative;
+            list-style: none;
+
+            > a {
+                @include flex();
+                @include flex-align-center();
+                @include flex-justify-end();
+                width: 100%;
+                height: 100%;
+                padding: .5em;
+                margin: 0 .5em;
+
+                .profile-image-wrapper {
+                    img {
+                        height: 45px;
+                        width: 45px;
+                        border: 0 none;
+                        border-radius: 50%;
+                    }
+                }
+
+                .profile-info-wrapper {
+                    margin-left: 15px;
+
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--text-color);
+                        margin: 0;
+                    }
+
+                    span {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: var(--text-color-secondary);
+                    }
+                }
+            }
+
+            > ul {
+                display: none;
+                position: absolute;
+                list-style-type: none;
+                margin: 0;
+                padding:0;
+                z-index: 1000;
+                min-width: 250px;
+                background-color: var(--highlight-bg);
+                @include multi-shadow(0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23));
+                border-radius: 10px;
+
+                &:before {
+                    width: 54px;
+                    height: 6px;
+                    background-color: var(--primary-color);
+                    content: " ";
+                    @include border-radius-top(2px);
+                    position: absolute;
+                    top: -5px;
+                    left: 0px;
+                }
+
+                > li {
+                    border-bottom:1px solid rgba(195, 204, 221, .3);
+                    border-top: none;
+                    cursor: pointer;
+                    padding: 10px;
+                    @include flex();
+                    @include flex-align-center();
+                    width: 100%;
+                    color: var(--text-color);
+                    cursor: pointer;
+
+                    i{
+                        @include flex();
+                        @include flex-justify-end();
+                        flex-grow: 1;
+                    }
+
+                    &:first-child{
+                        border-bottom:none;
+                    }
+
+                    &:last-child{
+                        cursor: initial;
+                        border: none;
+                    }
+
+                    &.profile-submenu-header {
+                        padding: 12px 18px 0 12px;
+                        @include flex();
+                        @include flex-justify-between();
+                        background-image: url("../../smsedu/images/profile/bg-profilemenu@2x.jpg");
+                        // background-color: red;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        @include flex-align-end();
+                    }
+
+                    .icon {
+                        flex-grow: 0;
+                        font-size: 18px;
+                        margin-right: 10px;
+
+                        &.icon-1 {
+                            color: #d08770;
+                        }
+
+                        &.icon-2 {
+                            color:#81a1c1;;
+                        }
+
+                        &.icon-3 {
+                            color: #a3be8c;
+                        }
+                    }
+
+                    &.layout-submenu-footer {
+                        @include flex();
+                        @include flex-justify-between();
+
+                        button {
+                            padding: 6px 12px;
+                            border: none;
+                            background-color: transparent;
+                            cursor: pointer;
+
+                            &.logout-button {
+                                color: #434c5e;
+                                @include border-radius(4px);
+                                background-color: #d8dee9;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active-topmenuitem {
+                > ul {
+                    display: block;
+                    left: auto;
+                    right: 0;
+
+                    &::before {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+  }
+}

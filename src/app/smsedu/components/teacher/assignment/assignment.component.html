@@ -1,0 +1,406 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<div class="grid">
+  <div class="col-12">
+    <div class="card px-6 py-6">
+      <!-- Tooolbar -->
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <button
+              pButton
+              pRipple
+              label="Thêm"
+              icon="pi pi-plus"
+              class="p-button-success mr-2"
+              (click)="openNew()"></button>
+            <button
+              pButton
+              pRipple
+              label="Xóa"
+              icon="pi pi-trash"
+              class="p-button-danger"
+              (click)="deleteSelectedTechers()"></button>
+          </div>
+        </ng-template>
+
+        <!-- <ng-template pTemplate="center">
+          <div
+            class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                placeholder="Search..."
+                (input)="onGlobalFilter(dt, $event)"
+                class="w-full sm:w-auto" />
+            </span>
+          </div>
+        </ng-template> -->
+
+        <ng-template pTemplate="right">
+          <!-- <p-fileUpload
+            mode="basic"
+            accept="image/*"
+            [maxFileSize]="1000000"
+            label="Import"
+            chooseLabel="Import"
+            class="mr-2 inline-block"></p-fileUpload> -->
+          <button
+            pButton
+            pRipple
+            label="Export"
+            icon="pi pi-upload"
+            class="p-button-help"
+            (click)="onExportExcelAssignment()"></button>
+        </ng-template>
+      </p-toolbar>
+
+      <!-- Table data -->
+      <p-table
+        #dt
+        [value]="assignments"
+        [(selection)]="selectedAssignments"
+        [lazy]="true"
+        (onLazyLoad)="onLoadAssignments($event)"
+        styleClass="p-datatable-gridlines"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [columns]="cols"
+        responsiveLayout="scroll"
+        [paginator]="true"
+        [rows]="10"
+        [totalRecords]="totalRecords"
+        [loading]="loading"
+        [showCurrentPageReport]="true"
+        currentPageReportTemplate="Hiển thị từ {first} đến {last} của mục {totalRecords}"
+        [rowsPerPageOptions]="[10, 20, 30]"
+        [resizableColumns]="true">
+        <ng-template pTemplate="caption">
+          <div class="flex">
+            <button
+              pButton
+              label="Clear"
+              class="p-button-outlined"
+              icon="pi pi-filter-slash"
+              (click)="clear()"></button>
+            <span class="p-input-icon-left ml-auto">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                [value]="searchTeacher"
+                placeholder="Tìm kiếm..."
+                (keyup)="onSearch(getSearchValue($event))"
+                class="w-full sm:w-auto" />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 3rem" class="text-center">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th pSortableColumn="teacher" class="text-center">
+              Họ và tên<p-sortIcon field="teacher"></p-sortIcon>
+            </th>
+            <th pSortableColumn="subject" class="text-center">
+              Môn giảng dạy<p-sortIcon field="subject"></p-sortIcon>
+            </th>
+            <th pSortableColumn="class" class="text-center">
+              Lớp<p-sortIcon field="class"></p-sortIcon>
+            </th>
+            <th pSortableColumn="lessonPerWeek" class="text-center">
+              Số tiết/Tuần<p-sortIcon field="lessonPerWeek"></p-sortIcon>
+            </th>
+            <th pSortableColumn="clusters" class="text-center">
+              Cụm<p-sortIcon field="clusters"></p-sortIcon>
+            </th>
+            <th pSortableColumn="status" class="text-center">
+              Trạng thái<p-sortIcon field="status"></p-sortIcon>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-assignment>
+          <tr>
+            <td class="text-center">
+              <p-tableCheckbox [value]="assignment"></p-tableCheckbox>
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">Họ và tên</span>
+              {{ assignment.teacher }}
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">Môn giảng dạy</span>
+              {{ assignment.subject }}
+            </td>
+            <td style="width: 14%; min-width: 10rem" class="text-center">
+              <span class="p-column-title">Lớp</span>
+              {{ assignment.class }}
+            </td>
+            <td style="width: 14%; min-width: 10rem" class="text-center">
+              <span class="p-column-title">Số tiết/Tuần</span>
+              {{ assignment.lessonPerWeek }}
+            </td>
+            <td style="width: 14%; min-width: 10rem" class="text-center">
+              <span class="p-column-title">Cụm</span>
+              {{ assignment.clusters.join('-') }}
+            </td>
+            <td style="width: 14%; min-width: 10rem" class="text-center">
+              <span class="p-column-title">Trạng thái</span>
+              <span
+                [class]="
+                  'assignment-badge status-' +
+                  (assignment.status
+                    ? assignment.status.toLowerCase()
+                    : 'inactivate')
+                "
+                >{{ assignment?.status || 'Không kích hoạt' }}</span
+              >
+            </td>
+            <td class="text-justify">
+              <div class="flex">
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-success mr-2"
+                  (click)="openEdit(assignment)"></button>
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-warning"
+                  (click)="onDeleteAssignment(assignment)"></button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <!-- Assignment Assignment -->
+      <p-dialog
+        [(visible)]="assignmentDialog"
+        [style]="{ width: '450px' }"
+        header="PHÂN CÔNG GIẢNG DẠY"
+        [modal]="true"
+        class="p-fluid">
+        <ng-template pTemplate="content">
+          <div class="field">
+            <label for="teacher">Họ và tên</label>
+            <p-autoComplete
+              inputId="teacher"
+              [(ngModel)]="teacher"
+              [dropdown]="true"
+              [suggestions]="filteredTeachers"
+              (completeMethod)="onFliterTeacher($event)"
+              (ngModelChange)="onTeacherIdChanged()"
+              field="name"
+              [ngClass]="{
+                'ng-invalid ng-dirty': submitted && !assignment.teacherId
+              }"></p-autoComplete>
+            <small
+              class="block p-error"
+              *ngIf="submitted && !assignment.teacherId"
+              >Họ và tên là bắt buộc.</small
+            >
+          </div>
+
+          <div class="field">
+            <label for="subject">Môn giảng dạy</label>
+            <p-autoComplete
+              inputId="subject"
+              [(ngModel)]="subject"
+              [dropdown]="true"
+              [suggestions]="filteredSubjects"
+              (completeMethod)="onFilterSubject($event)"
+              (ngModelChange)="onSubjectIdChanged()"
+              field="name"
+              [ngClass]="{
+                'ng-invalid ng-dirty': submitted && !assignment.subjectId
+              }"></p-autoComplete>
+            <small
+              class="block p-error"
+              *ngIf="submitted && !assignment.subjectId"
+              >Môn giảng dạy là bắt buộc.</small
+            >
+          </div>
+
+          <div class="field">
+            <label for="class">Lớp</label>
+            <p-autoComplete
+              inputId="class"
+              [(ngModel)]="class"
+              [dropdown]="true"
+              [suggestions]="filteredClasses"
+              (completeMethod)="onFliterClass($event)"
+              (ngModelChange)="onClassIdChanged()"
+              field="name"
+              [ngClass]="{
+                'ng-invalid ng-dirty': submitted && !assignment.classId
+              }"></p-autoComplete>
+            <small
+              class="block p-error"
+              *ngIf="submitted && !assignment.classId"
+              >Lớp học là bắt buộc.</small
+            >
+          </div>
+
+          <!-- <div class="field">
+            <label for="status">Trạng thái</label>
+            <p-dropdown
+              [(ngModel)]="assignment.status"
+              inputId="status"
+              optionValue="value"
+              [options]="statuses"
+              placeholder="Select">
+              <ng-template pTemplate="selectedItem">
+                <span
+                  *ngIf="assignment && assignment.status"
+                  [class]="
+                    'assignment-badge status-' +
+                    assignment.status.toString().toLowerCase()
+                  "
+                  >{{ assignment.status }}</span
+                >
+              </ng-template>
+              <ng-template let-option pTemplate="item">
+                <span [class]="'assignment-badge status-' + option.value">{{
+                  option.label
+                }}</span>
+              </ng-template>
+            </p-dropdown>
+          </div> -->
+
+          <div class="field">
+            <label for="lessonPerWeek">Số tiết/Tuần</label>
+            <p-inputNumber
+              [(ngModel)]="assignment.lessonPerWeek"
+              [showButtons]="true"
+              inputId="lessonPerWeek"
+              [min]="0"
+              [max]="10"
+              [ngClass]="{
+                'ng-invalid ng-dirty': submitted && !assignment.lessonPerWeek
+              }">
+            </p-inputNumber>
+            <small
+              class="block p-error"
+              *ngIf="submitted && !assignment.lessonPerWeek"
+              >Số tiết/Tuần là bắt buộc.</small
+            >
+          </div>
+
+          <div class="field">
+            <label for="clusters">Cụm</label>
+            <p-inputMask
+              inputId="clusters"
+              mask="9-9-9"
+              [disabled]="!assignment.lessonPerWeek"
+              [(ngModel)]="strClusters"
+              (ngModelChange)="onClustersChanged()"
+              placeholder="0-0-0"
+              [ngClass]="{
+                'ng-invalid ng-dirty':
+                  submitted && !assignment.lessonPerWeek && !isCheckClusters
+              }"></p-inputMask>
+            <small
+              class="block p-error"
+              *ngIf="submitted && !assignment.lessonPerWeek"
+              >Vui lòng nhập Số tiết/Tuần</small
+            >
+            <small
+              class="block p-error"
+              *ngIf="submitted && assignment.lessonPerWeek && !isCheckClusters"
+              >Đánh số cụm tiết theo thứ tự.</small
+            >
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            label="Hủy"
+            icon="pi pi-times"
+            class="p-button-text"
+            (click)="onHideDialog()"></button>
+          <button
+            pButton
+            pRipple
+            label="Lưu"
+            icon="pi pi-check"
+            class="p-button-text"
+            (click)="onSaveAssignment()"></button>
+        </ng-template>
+      </p-dialog>
+
+      <p-dialog
+        [(visible)]="deleteAssignmentDialog"
+        header="Xác nhận"
+        [modal]="true"
+        [style]="{ width: '450px' }">
+        <div class="flex align-items-center justify-content-center">
+          <i
+            class="pi pi-exclamation-triangle mr-3"
+            style="font-size: 2rem"></i>
+          <!-- eslint-disable prettier/prettier -->
+          <span *ngIf="assignment"
+            >Bản chắc chắn muốn xóa phân công của Giáo viên <b>{{
+              assignment.teacher
+            }}</b
+            >?</span
+          >
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-times"
+            class="p-button-text"
+            label="Không"
+            (click)="deleteAssignmentDialog = false"></button>
+          <button
+            pButton
+            pRipple
+            icon="pi pi-check"
+            class="p-button-text"
+            label="Có"
+            (click)="onConfirmDeleteAssignment()"></button>
+        </ng-template>
+      </p-dialog>
+
+      <p-dialog
+        [(visible)]="deleteSelectedAssignmentsDialog"
+        header="Xác nhận"
+        [modal]="true"
+        [style]="{ width: '450px' }">
+        <div class="flex align-items-center justify-content-center">
+          <i
+            class="pi pi-exclamation-triangle mr-3"
+            style="font-size: 2rem"></i>
+
+          <span *ngIf="teacher"
+            >Bản chắc chắn muốn xóa danh sách Phân công Giáo viên</span
+          >
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-times"
+            class="p-button-text"
+            label="Không"
+            (click)="deleteSelectedAssignmentsDialog = false"></button>
+          <button
+            pButton
+            pRipple
+            icon="pi pi-check"
+            class="p-button-text"
+            label="Có"
+            (click)="onConfirmSelectedDelete()"></button>
+        </ng-template>
+      </p-dialog>
+    </div>
+  </div>
+</div>

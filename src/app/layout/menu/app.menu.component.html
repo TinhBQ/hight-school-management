@@ -1,0 +1,65 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="layout-menu" [ngClass]="collapsed ? 'menu-nav-collapsed' : ''">
+  <!-- Log -->
+  <div class="menu-hedader-container">
+    <smsedu-logo-main
+      class="menu-hedader-logo h-2rem"
+      *ngIf="collapsed"></smsedu-logo-main>
+    <smsedu-logo-short
+      class="menu-hedader-logo"
+      *ngIf="!collapsed"></smsedu-logo-short>
+    <i
+      class="menu-hedader-icon"
+      [class]="strIconHeader"
+      (click)="onToggleCollapsed()"></i>
+  </div>
+
+  <!-- Menu Nav -->
+  <div class="scrollwrap scrollwrap_delayed">
+    <ul class="menu-nav">
+      <li class="menu-nav-item" *ngFor="let data of navData">
+        <a
+          class="menu-nav-link"
+          *ngIf="data.items && data.items.length > 0"
+          (click)="handleClick(data)"
+          (click)="onOpenSideNav()"
+          [ngClass]="getActiveClass(data)">
+          <i class="menu-nav-icon" [class]="data.icon"></i>
+          <span class="menu-nav-link-text" @fadeInOut *ngIf="collapsed">
+            {{ data.label }}
+          </span>
+          <i
+            *ngIf="data.items && collapsed"
+            class="menu-collapse-icon"
+            [ngClass]="
+              !data.expanded ? 'pi pi-chevron-up' : 'pi pi-chevron-down'
+            ">
+          </i>
+        </a>
+
+        <a
+          class="menu-nav-link"
+          *ngIf="!data.items || (data.items && data.items.length === 0)"
+          [routerLink]="[data.routeLink]"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="shrinkItems(data)"
+          (click)="onOpenSideNav()">
+          <i class="menu-nav-icon" [class]="data.icon"></i>
+          <span class="menu-nav-link-text" @fadeInOut *ngIf="collapsed">
+            {{ data.label }}
+          </span>
+        </a>
+
+        <ng-container *ngIf="collapsed && data.items && data.items.length > 0">
+          <app-menuitem
+            [data]="data"
+            [collapsed]="collapsed"
+            [multiple]="multiple"
+            [expanded]="data.expanded"></app-menuitem>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+</div>

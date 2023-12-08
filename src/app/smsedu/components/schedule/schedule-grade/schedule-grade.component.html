@@ -1,0 +1,94 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<div class="assignment-body grid">
+  <div class="col-12">
+    <div class="card px-6 py-6 bg-">
+      <p-table
+        #dt
+        [value]="transformedArrays"
+        [columns]="cols"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        styleClass="p-datatable-gridlines"
+        [resizableColumns]="true"
+        rowGroupMode="rowspan"
+        groupRowsBy="_index"
+        sortField="_index"
+        responsiveLayout="scroll">
+        <ng-template pTemplate="caption">
+          <div class="flex">
+            <p-dropdown
+              id="schoolShift"
+              [(ngModel)]="schoolShift"
+              [options]="schoolShifts"
+              optionLabel="name"
+              placeholder="Chọn buổi"
+              class="w-full"
+              (ngModelChange)="onChange()"></p-dropdown>
+            <button
+              pButton
+              pRipple
+              label="Export"
+              icon="pi pi-upload"
+              class="p-button-help ml-auto"
+              (click)="onExportExcel()"></button>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>Thứ</th>
+            <th>Tiết</th>
+            <th *ngFor="let col of columns">
+              {{ col.header }}
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template
+          pTemplate="body"
+          let-transformedArray
+          let-columns="columns"
+          let-rowgroup="rowgroup"
+          let-rowspan="rowspan">
+          <tr>
+            <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
+              {{ getWeekday(transformedArray['_index']) }}
+            </td>
+            <!-- <td>
+              {{ getWeekday(transformedArray['_index']) }}
+            </td> -->
+            <td>
+              {{ getPeriod(transformedArray['_index']) }}
+            </td>
+            <td *ngFor="let col of columns">
+              {{ getDetail(transformedArray[col.field]) }}
+            </td>
+          </tr>
+        </ng-template>
+        <!-- <ng-template pTemplate="header">
+          <tr>
+            <th>Tiết</th>
+            <th>Thời gian</th>
+            <th>Thứ 2</th>
+            <th>Thứ 3</th>
+            <th>Thứ 4</th>
+            <th>Thứ 5</th>
+            <th>Thứ 6</th>
+            <th>Thứ 7</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-transformedArray>
+          <tr>
+            <td>{{ transformedArray.period }}</td>
+            <td>{{ transformedArray.time }}</td>
+            <td>
+              {{ getDetail(transformedArray.t2) }}
+            </td>
+            <td>{{ getDetail(transformedArray.t3) }}</td>
+            <td>{{ getDetail(transformedArray.t4) }}</td>
+            <td>{{ getDetail(transformedArray.t5) }}</td>
+            <td>{{ getDetail(transformedArray.t6) }}</td>
+            <td>{{ getDetail(transformedArray.t7) }}</td>
+          </tr> -->
+        <!-- </ng-template> -->
+      </p-table>
+    </div>
+  </div>
+</div>

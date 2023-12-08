@@ -1,0 +1,216 @@
+.layout-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 100vh;
+  border-right: 2px solid var(--surface-border);
+  transition: all .5s ease;
+  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+  width: 76px;
+  background-color: var(--blue-50);
+
+  // ------------------ Logo ------------------
+  .menu-hedader-container {
+    @include flex();
+    @include flex-align-center();
+    height: 75px;
+    padding-left: 24px;
+    position: relative;
+
+    i {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      padding: 8px;
+      border-radius: 50%;
+      cursor: pointer;
+      position: absolute;
+      background-color: var(--surface-ground);
+      right: -17px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid var(--surface-border);
+      color: var(--text-color-secondary);
+      text-align: center;
+    }
+  }
+
+  // ------------------ Menu Nav ------------------
+  .menu-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 0 16px;
+
+    .menu-nav-item {
+      // margin: 0px 16px;
+      width: 100%;
+
+      .menu-nav-link {
+        
+        height: 38px;
+        @include flex();
+        @include flex-align-center();
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 6px;
+        border: 1px solid var(--text-color);
+        transition: all .3s ease;
+
+        .menu-nav-icon {
+          width: 44px;
+          min-width: 44px;
+          text-align: center;
+        }
+    
+        .menu-collapse-icon {
+          position: absolute;
+          right: 16px;
+          font-size: 10px;
+        }
+
+        .menu-nav-link-text {
+          margin-left: 8px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--surface-300);
+          @include transition(background-color $transitionDuration);
+        }
+      }
+
+      .sublevel-nav {
+        list-style: none;
+        padding-left: 20px;
+        
+        .sublevel-nav-item {
+          list-style: none;
+
+          .sublevel-nav-link {
+            // padding: 12px;
+            height: 38px;
+            @include flex();
+            @include flex-align-center();
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            transition: all .3s ease;
+
+            .sublevel-nav-icon {
+              width: 44px;
+              min-width: 44px;
+              text-align: center;
+            }
+
+            .sublevel-collapse-icon {
+              position: absolute;
+              right: 16px;
+              font-size: 10px;
+            }
+
+            .sublevel-nav-link-text  {
+              margin-left: 8px;
+            }
+          }
+
+          &:hover {
+            background-color: var(--surface-300);
+            border-radius: 8px;
+            @include transition(background-color $transitionDuration);
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-nav-collapsed {
+  width: 280px;
+}
+
+.flex-center {
+  @include flex();
+  @include flex-align-center();
+  @include flex-justify-center();
+}
+
+
+.active {
+  background-color: var(--blue-100) !important;
+  border: 1px solid var(--blue-700) !important;
+
+  .menu-nav-icon,
+  .menu-nav-link-text,
+  .menu-collapse-icon {
+    color: var(--blue-700);
+  }
+
+  &:hover {
+    background-color: var(--blue-200) !important;
+    @include transition(background-color $transitionDuration);
+  }
+}
+
+.active-sublevel {
+  color: var(--blue-700) !important;
+
+  &:hover {
+    background-color: var(--blue-100) !important;
+    border-radius: 8px; 
+    @include transition(background-color $transitionDuration);
+  }
+}
+
+.expended-sublevel {
+  margin-bottom: 6px;
+}
+
+//scrollbar and visibility on hover and focus
+.menu-nav-container {
+  overflow-y: auto;
+  height: calc(100vh - 75px);
+}
+
+.scrollwrap {
+  overflow-y: auto;
+  height: calc(100vh - 75px);
+}
+
+.sidenav-nav,
+.scrollwrap:hover,
+.scrollwrap:focus {
+  visibility: visible;
+}
+
+.scrollwrap_delayed {
+  transition: visibility 0.5s 0.2s;
+}
+
+.scrollwrap_delayed:hover {
+  transition: visibility 0.2s 0.2s;
+}
+
+// works on chrome, edge and safari
+.scrollwrap::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollwrap::-webkit-scrollbar-thumb {
+  background-color: #556268;
+  border-radius: 20px;
+}
+
+// works on firefox
+.scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: #556268 transparent;
+}

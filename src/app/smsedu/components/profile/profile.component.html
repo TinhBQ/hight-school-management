@@ -1,0 +1,359 @@
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<li
+  #profile
+  class="topbar-item profile-item"
+  [ngClass]="{ 'active-topmenuitem': activeTopbarItem === profile }">
+  <a href="#" (click)="onProfileItemClick($event, profile)">
+    <span class="profile-image-wrapper">
+      <img
+        src="https://i.pinimg.com/474x/cc/1f/39/cc1f396b8088b9004bf566642fe71b32.jpg"
+        alt="Profile" />
+    </span>
+    <span class="profile-info-wrapper">
+      <h3>{{ _profile?.teacher?.name || 'Chưa cập nhật' }}</h3>
+      <span>{{ _profile?.role === 'teacher' ? 'Giáo viên' : 'Admin' }}</span>
+    </span>
+  </a>
+  <ul class="profile-item-submenu fadeInDown" (click)="onCloseProfileItem()">
+    <li class="profile-submenu-header"></li>
+    <li class="layout-submenu-item" (click)="onOpenForgotPasswordDialog()">
+      <i class="pi pi-list icon icon-1"></i>
+      <div class="menu-text">
+        <p>Quên mật khẩu</p>
+      </div>
+      <i class="pi pi-angle-right"></i>
+    </li>
+    <li class="layout-submenu-item" (click)="onOpenEditProfile()">
+      <i class="pi pi-shopping-cart icon icon-2"></i>
+      <div class="menu-text">
+        <p>Hồ sơ cá nhân</p>
+      </div>
+      <i class="pi pi-angle-right"></i>
+    </li>
+    <li class="layout-submenu-footer">
+      <button class="logout-button" (click)="onConfirmLogout()">
+        Đăng xuất
+      </button>
+    </li>
+  </ul>
+</li>
+
+<p-dialog
+  [(visible)]="forgotPasswordDialog"
+  header="QUÊN MẬT KHẨU"
+  [modal]="true"
+  class="p-fluid"
+  [style]="{ width: '30vw' }">
+  <ng-template pTemplate="content">
+    <form [formGroup]="forgotPasswordForm" autocomplete="off">
+      <div class="flex flex-column flex-auto mb-4">
+        <label for="newPassword" class="font-bold block mb-2"
+          >Mật khẩu mới</label
+        >
+        <input
+          type="text"
+          pInputText
+          id="newPassword"
+          formControlName="newPassword"
+          placeholder="..."
+          class="w-full" />
+        <small
+          *ngIf="
+            forgotPasswordForm.controls['newPassword'].invalid &&
+            (forgotPasswordForm.controls['newPassword'].dirty ||
+              forgotPasswordForm.controls['newPassword'].touched)
+          "
+          class="block p-error mt-2">
+          <div
+            *ngIf="
+              forgotPasswordForm.controls['newPassword'].errors?.['required']
+            ">
+            Mật khẩu mới là bắt buộc.
+          </div>
+          <div
+            *ngIf="
+              forgotPasswordForm.controls['newPassword'].errors?.['minlength']
+            ">
+            Mật khẩu mới có ít nhất 8 ký tự
+          </div>
+        </small>
+      </div>
+      <div class="flex flex-column flex-auto mb-4">
+        <label for="confirmPassword" class="font-bold block mb-2"
+          >Xác nhận mật khẩu</label
+        >
+        <input
+          type="text"
+          pInputText
+          id="confirmPassword"
+          formControlName="confirmPassword"
+          placeholder="..."
+          class="w-full" />
+        <small
+          *ngIf="
+            (forgotPasswordForm.controls['confirmPassword'].invalid &&
+              (forgotPasswordForm.controls['confirmPassword'].dirty ||
+                forgotPasswordForm.controls['confirmPassword'].touched)) ||
+            forgotPasswordForm.hasError('mismatch')
+          "
+          class="block p-error mt-2">
+          <div
+            *ngIf="
+              forgotPasswordForm.controls['confirmPassword'].errors?.[
+                'required'
+              ]
+            ">
+            Mật khẩu mới là bắt buộc.
+          </div>
+          <div
+            *ngIf="
+              forgotPasswordForm.controls['confirmPassword'].errors?.[
+                'minLength'
+              ]
+            ">
+            Mật khẩu mới có ít nhất 8 ký tự
+          </div>
+          <div *ngIf="forgotPasswordForm.hasError('mismatch')">
+            Mật khẩu không hợp lệ
+          </div>
+        </small>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      pRipple
+      label="Hủy"
+      icon="pi pi-times"
+      class="p-button-text"
+      (click)="forgotPasswordDialog = false"></button>
+    <button
+      pButton
+      pRipple
+      label="Lưu"
+      icon="pi pi-check"
+      class="p-button-text"
+      [disabled]="forgotPasswordForm.invalid"
+      (click)="onCofirmForgotPassword()"></button>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  [(visible)]="teacherDialog"
+  header="HỒ SƠ CÁ NHÂN"
+  [modal]="true"
+  class="p-fluid">
+  <ng-template pTemplate="content">
+    <form [formGroup]="teacherForm" autocomplete="off">
+      <div class="flex flex-wrap gap-3 mb-4">
+        <!-- Teacher Form: name -->
+        <div class="flex-auto">
+          <label for="name" class="font-bold block mb-2">Họ và tên</label>
+          <input
+            type="text"
+            pInputText
+            id="name"
+            formControlName="name"
+            placeholder="..."
+            class="w-full" />
+          <small
+            *ngIf="
+              teacherForm.controls['name'].invalid &&
+              (teacherForm.controls['name'].dirty ||
+                teacherForm.controls['name'].touched)
+            "
+            class="block p-error mt-2">
+            <div *ngIf="teacherForm.controls['name'].errors?.['required']">
+              Họ và tên là bắt buộc.
+            </div>
+            <div *ngIf="teacherForm.controls['name'].errors?.['pattern']">
+              Họ và tên không hợp lệ.
+            </div>
+          </small>
+        </div>
+
+        <!-- Teacher Form: nickName -->
+        <div class="flex-auto">
+          <label for="nickname" class="font-bold block mb-2">Biệt danh</label>
+          <input
+            type="text"
+            pInputText
+            id="nickname"
+            formControlName="nickname"
+            placeholder="..."
+            class="w-full" />
+          <small
+            *ngIf="
+              teacherForm.controls['nickname'].invalid &&
+              (teacherForm.controls['nickname'].dirty ||
+                teacherForm.controls['nickname'].touched)
+            "
+            class="block p-error mt-2">
+            <div *ngIf="teacherForm.controls['nickname'].errors?.['required']">
+              Họ và tên là bắt buộc.
+            </div>
+            <div *ngIf="teacherForm.controls['nickname'].errors?.['pattern']">
+              Biệt danh không hợp lệ.
+            </div>
+          </small>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-4">
+        <!-- Teacher Form: gender -->
+        <div class="flex-auto flex flex-wrap gap-3">
+          <label for="male" class="font-bold block flex align-items-center"
+            >Giới tính</label
+          >
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="gender"
+              value="M"
+              formControlName="gender"
+              inputId="male"></p-radioButton>
+            <label for="male" class="ml-2">Nam</label>
+          </div>
+
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="gender"
+              value="F"
+              formControlName="gender"
+              inputId="female"></p-radioButton>
+            <label for="female" class="ml-2">Nữ</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-4">
+        <!-- Teacher Form: phone -->
+        <div class="flex-auto">
+          <label for="phone" class="font-bold block mb-2">Số điện thoại</label>
+          <input
+            type="text"
+            pInputText
+            id="phone"
+            formControlName="phone"
+            placeholder="01234567xx"
+            class="w-full" />
+          <small
+            *ngIf="
+              teacherForm.controls['phone'].invalid &&
+              (teacherForm.controls['phone'].dirty ||
+                teacherForm.controls['phone'].touched)
+            "
+            class="block p-error mt-2">
+            <div *ngIf="teacherForm.controls['phone'].errors?.['required']">
+              Số điện thoại là bắt buộc.
+            </div>
+            <div *ngIf="teacherForm.controls['phone'].errors?.['pattern']">
+              Số điện thoại không hợp lệ.
+            </div>
+          </small>
+        </div>
+
+        <!-- Teacher Form: email -->
+        <div class="flex-auto">
+          <label for="email" class="font-bold block mb-2">Email</label>
+          <input
+            type="text"
+            pInputText
+            id="email"
+            formControlName="email"
+            placeholder="..."
+            class="w-full" />
+          <small
+            *ngIf="
+              teacherForm.controls['email'].invalid &&
+              (teacherForm.controls['email'].dirty ||
+                teacherForm.controls['email'].touched)
+            "
+            class="block p-error mt-2">
+            <div *ngIf="teacherForm.controls['email'].errors?.['required']">
+              Email là bắt buộc.
+            </div>
+            <div *ngIf="teacherForm.controls['email'].errors?.['email']">
+              Email không hợp lệ.
+            </div>
+          </small>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-4">
+        <!-- Teacher Form: dateOfBirth -->
+        <div class="flex-auto">
+          <label for="dateOfBirth" class="font-bold block mb-2"
+            >Ngày sinh</label
+          >
+          <p-calendar
+            id="name"
+            dateFormat="dd-mm-yy"
+            id="dateOfBirth"
+            formControlName="dateOfBirth"
+            [readonlyInput]="true"
+            [showButtonBar]="true"
+            appendTo="body"
+            placeholder="..-..-...." />
+
+          <small
+            *ngIf="
+              teacherForm.controls['dateOfBirth'].invalid &&
+              (teacherForm.controls['dateOfBirth'].dirty ||
+                teacherForm.controls['dateOfBirth'].touched)
+            "
+            class="block p-error mt-2">
+            <div
+              *ngIf="teacherForm.controls['dateOfBirth'].errors?.['required']">
+              Ngày sinh là bắt buộc.
+            </div>
+          </small>
+        </div>
+
+        <!-- Teacher Form: adress -->
+        <div class="flex-auto">
+          <label for="address" class="font-bold block mb-2">Địa chỉ</label>
+          <input
+            type="text"
+            pInputText
+            id="address"
+            formControlName="address"
+            placeholder="..." />
+          <small
+            *ngIf="
+              teacherForm.controls['address'].invalid &&
+              (teacherForm.controls['address'].dirty ||
+                teacherForm.controls['address'].touched)
+            "
+            class="block p-error mt-2">
+            <div *ngIf="teacherForm.controls['address'].errors?.['required']">
+              Địa chỉ là bắt buộc.
+            </div>
+          </small>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <!-- Action -->
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      pRipple
+      label="Hủy"
+      icon="pi pi-times"
+      class="p-button-text"
+      (click)="teacherDialog = false"></button>
+    <button
+      pButton
+      pRipple
+      label="Lưu"
+      icon="pi pi-check"
+      class="p-button-text"
+      [disabled]="teacherForm.invalid"
+      (click)="onCofirmUpdateProfile()"></button>
+  </ng-template>
+</p-dialog>
